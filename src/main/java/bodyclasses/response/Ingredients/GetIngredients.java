@@ -123,8 +123,8 @@ public class GetIngredients {
     public static List<String> buildRandomOrder(List<String> saucesHash,List<String> mainsHash,List<String> bunsHash){
         List<String> orderBody = new ArrayList<>();
         orderBody.add(GetIngredients.addRandomBun(bunsHash));
-        orderBody.addAll(saucesHash);
-        orderBody.addAll(mainsHash);
+        orderBody.addAll(GetIngredients.addRandomSauces(saucesHash));
+        orderBody.addAll(GetIngredients.addRandomMains(mainsHash));
         return orderBody;
     }
 }
