@@ -69,13 +69,13 @@ public class OrderCreate {
                 .post(Constants.ORDERS);
         return response;
     }
-    @Step("Compare the answer with invalid hash (Order Create)")
+    @Step("Compare the answer with invalid hash")
     public static  void compareResponseWithInvalidHash(Response response){
         response.then()
                 .assertThat()
                 .statusCode(500);
     }
-    @Step("Compare the answer with answer without ingredients (Order Create)")
+    @Step("Compare the answer with answer without ingredients")
     public static  void compareResponseWithoutIngredients(Response response){
         response.then()
                 .assertThat()
