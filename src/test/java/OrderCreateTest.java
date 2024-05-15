@@ -24,7 +24,7 @@ public class OrderCreateTest {
     public void setUp() {
         RestAssured.baseURI = Constants.BASE_URL;
         GetIngredients allIngredients = new GetIngredients();
-        Response getIngredients = allIngredients.sendGetIngredients();
+        Response getIngredients = GetIngredients.sendGetIngredients();
         bunsHash = allIngredients.getBunsHash(getIngredients);
         saucesHash = allIngredients.getSaucesHash(getIngredients);
         mainsHash = allIngredients.getMainsHash(getIngredients);
